@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <!--Simbolos svg: Material Symbols de Google-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <!--Hoja de estilos-->
+    <link rel="stylesheet" href="style.css">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1>TOONIE</h1>
+        </div>
+        <div class="menu">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="carrito.html">Carrito <span id="contador-carrito" class="insignia">0</span></a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+                <button id="btn-tema" class="btn-tema"><span class="material-symbols-outlined">dark_mode</span></button>
+                <button id="btn-menu" class="btn-menu"><span class="material-symbols-outlined">menu</span></button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="catalogo">
+            <h2>Catálogo</h2>
+            <div class="filtros">
+                <input type="search" id="buscador" placeholder="Buscar artículo">
+            </div>
+            <p id="sin-resultados" class="aviso" hidden>No hay productos con esa búsqueda</p>
+            <div id="rejilla-libros" class="rejilla"></div>
+        </section>
+
+        <div class="carrusel-wrapper">
+            <button class="btn-carrusel prev"><span class="material-symbols-outlined">arrow_back_ios</span></button>
+            <div class="carrusel">
+                <div class="catalogo-container">
+                    <div class="producto-card">
+                        <img src="img/bts.png" alt="bts">
+                        <h3>BTS - Rolling Stone Collectors Edition Set</h3>
+                        <p>Edición de colección de Rolling Stone</p>
+                        <h4>$3451</h4>
+                        <div class="contador">
+                            <button class="btn-menos">-</button>
+                            <span class="cantidad">1</span>
+                            <button class="btn-mas">+</button>
+                        </div>
+                        <!--data-id para que sepa el JavaScript que producto estoy haciendo click-->
+                        <p><button class="btn-ordenar" data-id="prod-1">Ordenar</button></p>
+                    </div>
+                    <div class="producto-card">
+                        <img src="img/nct.png" alt="nct">
+                        <h3>NCT127: BLINGY</h3>
+                        <p>Camisa de algodón</p>
+                        <h4>$377</h4>
+                        <div class="contador">
+                            <button class="btn-menos">-</button>
+                            <span class="cantidad">1</span>
+                            <button class="btn-mas">+</button>
+                        </div>
+                        <p><button class="btn-ordenar" data-id="prod-2">Ordenar</button></p>
+                    </div>
+                    <div class="producto-card">
+                        <img src="img/llavero.png" alt="llavero">
+                        <h3>One-Room TA</h3>
+                        <p>Llavero de teclas</p>
+                        <h4>$287</h4>
+                        <div class="contador">
+                            <button class="btn-menos">-</button>
+                            <span class="cantidad">1</span>
+                            <button class="btn-mas">+</button>
+                        </div>
+                        <p><button class="btn-ordenar" data-id="prod-3">Ordenar</button></p>
+                    </div>
+                    <div class="producto-card">
+                        <img src="img/alien.png" alt="alien">
+                        <h3>Alien Stage</h3>
+                        <p>Póster de colección de Anakt Garden</p>
+                        <h4>$161</h4>
+                        <div class="contador">
+                            <button class="btn-menos">-</button>
+                            <span class="cantidad">1</span>
+                            <button class="btn-mas">+</button>
+                        </div>
+                        <p><button class="btn-ordenar" data-id="prod-4">Ordenar</button></p>
+                    </div>
+
+                    <div class="producto-card">
+                        <img src="img/debut.png" alt="debut">
+                        <h3>Debut or Die</h3>
+                        <p>Parte 4 Set (Pasta dura + Cubierta de libro + Mini Póster)</p>
+                        <h4>$1959</h4>
+                        <div class="contador">
+                            <button class="btn-menos">-</button>
+                            <span class="cantidad">1</span>
+                            <button class="btn-mas">+</button>
+                        </div>
+                        <p><button class="btn-ordenar" data-id="prod-5">Ordenar</button></p>
+                    </div>
+
+                    <div class="producto-card">
+                        <img src="img/mom.png" alt="mom">
+                        <h3>On the Way to Meet Mom</h3>
+                        <p>Versión especial Vol. 3 y 4</p>
+                        <h4>$898</h4>
+                        <div class="contador">
+                            <button class="btn-menos">-</button>
+                            <span class="cantidad">1</span>
+                            <button class="btn-mas">+</button>
+                        </div>
+                        <p><button class="btn-ordenar" data-id="prod-6">Ordenar</button></p>
+                    </div>
+                    <div class="producto-card">
+                        <img src="img/apricot.png" alt="apricot">
+                        <h3>SKINFOOD Mascarilla Facial</h3>
+                        <p>Mascarilla facial de albaricoque</p>
+                        <h4>$215</h4>
+                        <div class="contador">
+                            <button class="btn-menos">-</button>
+                            <span class="cantidad">1</span>
+                            <button class="btn-mas">+</button>
+                        </div>
+                        <p><button class="btn-ordenar" data-id="prod-7">Ordenar</button></p>
+                    </div>
+                    <div class="producto-card">
+                        <img src="img/toner.png" alt="toner">
+                        <h3>SKINFOOD Tónico</h3>
+                        <p>Rico en aguacate</p>
+                        <h4>$269</h4>
+                        <div class="contador">
+                            <button class="btn-menos">-</button>
+                            <span class="cantidad">1</span>
+                            <button class="btn-mas">+</button>
+                        </div>
+                        <p><button class="btn-ordenar" data-id="prod-8">Ordenar</button></p>
+                    </div>
+                    <div class="producto-card">
+                        <img src="img/cuchillo.png" alt="cuchillo">
+                        <h3>Neoflam</h3>
+                        <p>Juego de 4 cuchillos con revestimiento de titanio</p>
+                        <h4>$400</h4>
+                        <div class="contador">
+                            <button class="btn-menos">-</button>
+                            <span class="cantidad">1</span>
+                            <button class="btn-mas">+</button>
+                        </div>
+                        <p><button class="btn-ordenar" data-id="prod-9">Ordenar</button></p>
+                    </div>
+                    <div class="producto-card">
+                        <img src="img/cacerola.png" alt="cacerola">
+                        <h3>Neoflam x Miffy</h3>
+                        <p>Cacerola de leche de 16 cm</p>
+                        <h4>$2150</h4>
+                        <div class="contador">
+                            <button class="btn-menos">-</button>
+                            <span class="cantidad">1</span>
+                            <button class="btn-mas">+</button>
+                        </div>
+                        <p><button class="btn-ordenar" data-id="prod-10">Ordenar</button></p>
+                    </div>
+                </div>
+                <button class="btn-carrusel next"><span
+                        class="material-symbols-outlined">arrow_forward_ios</span></button>
+            </div>
+    </main>
+
+    <footer>
+        <p>Proyecto Intersemestral | Isabel Ixchel Torres Sánchez | 00507838 | Programación para Internet | Maestra
+            Karla Vianney Ramos García | Viernes 2 de octubre de 2026 </p>
+        <p>Tienda especializada en productos coreanos</p>
+    </footer>
+
+    <!--jQuery-->
+    <script src="scripts/jquery-4.0.0.min.js"></script>
+    <!--Archivo JavaScript-->
+    <script src="scripts/script.js"></script>
+    <!--Archivo de uso de jQuery-->
+    <script src="scripts/jQueryScript.js"></script>
+</body>
+
+</html>

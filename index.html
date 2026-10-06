@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TOONIE</title>
+    <!--Simbolos svg: Material Symbols de Google-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <!--Hoja de estilos-->
+    <link rel="stylesheet" href="style.css">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1>TOONIE</h1>
+        </div>
+        <div class="menu">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="carrito.html">Carrito <span id="contador-carrito" class="insignia">0</span></a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+                <button id="btn-tema" class="btn-tema"><span class="material-symbols-outlined">dark_mode</span></button>
+                <button id="btn-menu" class="btn-menu"><span class="material-symbols-outlined">menu</span></button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="pagina activa">
+            <div class="principal">
+                <div class="texto-principal">
+                    <h1>El único almacén de productos de Corea en Querétaro</h1>
+                    <p>Elige, añade al carrito y recíbelos en casa.</p>
+                </div>
+                <section class="productos-container">
+                    <div class="productos-imagenes">
+                        <div class="productos-img">
+                            <img src="img/business.png" alt="1" />
+                            <h1>Propuesta laboral</h1>
+                            <div class="details">
+                                <h2>Propuesta laboral</h2>
+                                <p>Títulos de Romance</p>
+                            </div>
+                        </div>
+                        <div class="productos-img">
+                            <img src="img/cream.png" alt="2" />
+                            <h1>SKINFOOD</h1>
+                            <div class="details">
+                                <h2>SKINFOOD</h2>
+                                <p>Cleansing Foam</p>
+                            </div>
+                        </div>
+                        <div class="productos-img">
+                            <img src="img/jinx.png" alt="3" />
+                            <h1>Jinx</h1>
+                            <div class="details">
+                                <h2>Jinx</h2>
+                                <p>Títulos de Deporte</p>
+                            </div>
+                        </div>
+                        <div class="productos-img active">
+                            <img src="img/orv.png" alt="4" />
+                            <h1>El punto de vista del lector omnisciente</h1>
+                            <div class="details">
+                                <h2>El punto de vista del lector omnisciente</h2>
+                                <p>Títulos de acción</p>
+                            </div>
+                        </div>
+                        <div class="productos-img">
+                            <img src="img/ropa.png" alt="5" />
+                            <h1>Productos de SPAO</h1>
+                            <div class="details">
+                                <h2>SPAO</h2>
+                                <p>Productos de tiendas coreanas</p>
+                            </div>
+                        </div>
+                        <div class="productos-img">
+                            <img src="img/solo.png" alt="6" />
+                            <h1>Solo Leveling</h1>
+                            <div class="details">
+                                <h2>Solo Leveling</h2>
+                                <p>Títulos de aventura</p>
+                            </div>
+                        </div>
+                        <div class="productos-img">
+                            <img src="img/this.png" alt="7" />
+                            <h1>This & That</h1>
+                            <div class="details">
+                                <h2>This & That Stray Kids</h2>
+                                <p>Productos de K-Pop</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="cinta">
+                <div><strong>Envío gratis</strong> desde $900 MXN</div>
+                <div><strong>Devoluciones</strong> en 15 días</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Proyecto Intersemestral | Isabel Ixchel Torres Sánchez | 00507838 | Programación para Internet | Maestra
+            Karla Vianney Ramos García | Viernes 2 de octubre de 2026 </p>
+        <p>Tienda especializada en productos coreanos</p>
+    </footer>
+
+    <!--jQuery-->
+    <script src="scripts/jquery-4.0.0.min.js"></script>
+    <!--Archivo JavaScript-->
+    <script src="scripts/script.js"></script>
+    <!--Archivo de uso de jQuery-->
+    <script src="scripts/jQueryScript.js"></script>
+</body>
+
+</html>
