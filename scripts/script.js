@@ -143,6 +143,15 @@ const productosDB = {
     precio: 2150,
     imagen: "img/cacerola.png",
   },
+
+  "prod-11": {
+    id: "prod-11",
+    producto: "El punto de vista del lector omnisciente",
+    descripcion: "Set de libros de bolsillo",
+    precio: 1689,
+    imagen: "img/orvSet2.png",
+  },
+
 };
 
 //Carrito y calculadora de divisas
