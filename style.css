@@ -879,6 +879,71 @@ footer {
 #carrito-vacio{
     text-align: center;
 }
+
+/*Ir hacia arriba*/
+.go-top-container{
+    position: fixed;
+    bottom: 4rem;
+    right: 2rem;
+    width: 4rem;
+    height: 4rem;
+    z-index: -1;
+}
+
+.go-top-button{
+    position: absolute;
+    width: 0rem;
+    height: 0rem;
+    background:#992447;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.go-top-button span{
+    position: absolute;
+    font-size: 1.7rem;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: whitesmoke;
+    transition: .2s;
+}
+
+.show{
+    z-index: 10;
+}
+
+.show .go-top-button{
+    animation: popup .3s ease-in-out;
+    width: 3.5rem;
+    height: 3.5rem;
+    z-index: 11;
+}
+
+.show span{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup {
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+    50%{
+        width: 4.2rem;
+        height: 4.2rem;
+    }
+    100%{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
+
 /*Modo oscuro*/
 body.modo-oscuro {
     background-color: #141418;
@@ -1113,6 +1178,16 @@ body.modo-oscuro .bx-wrapper .bx-pager.bx-pager.bx-default-pager a.active{
 body.modo-oscuro .NuevoLanzamiento .informacion{
     color: whitesmoke;
 }
+
+body.modo-oscuro .go-top-button{
+    background:#DA5676;
+    box-shadow: 0 4px 15px rgba(218, 86, 118, 0.3);
+}
+
+body.modo-oscuro .go-top-button span{
+    color: #141418;
+}
+
 /*Diseño responsivo*/
 /*Pantalla completa no sale el menú hamburguesa*/
 .btn-menu {
