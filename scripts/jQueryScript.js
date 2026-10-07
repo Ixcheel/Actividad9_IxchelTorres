@@ -76,6 +76,18 @@ function actualizarCarrito() {
 
 //Eventos del DOM
 $(document).ready(function () {
+  //bxSlider
+  if($(".slider").length > 0){
+    $(".slider").bxSlider({
+      auto:true,
+      pause: 4000,
+      controls:false,
+      pager:true,
+      pager:true,
+      adaptiveHeight:true,
+      touchEnabled: true
+    });
+  }
   //Funciones de script.js
   if (typeof cargarCarrito === "function") {
     cargarCarrito();

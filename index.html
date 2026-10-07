@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="style.css">
     <!--Favicon-->
     <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+    <!--bxSlider-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
 </head>
 
 <body>
@@ -21,11 +23,11 @@
         </div>
         <div class="menu">
             <nav>
-                <a href="index.html">Inicio</a>
-                <a href="catalogo.html">Catálogo</a>
-                <a href="carrito.html">Carrito <span id="contador-carrito" class="insignia">0</span></a>
-                <a href="nosotros.html">Nosotros</a>
-                <a href="contacto.html">Contacto</a>
+                <a href="#inicio">Inicio</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#carrito">Carrito <span id="contador-carrito" class="insignia">0</span></a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#contacto">Contacto</a>
                 <button id="btn-tema" class="btn-tema"><span class="material-symbols-outlined">dark_mode</span></button>
                 <button id="btn-menu" class="btn-menu"><span class="material-symbols-outlined">menu</span></button>
             </nav>
@@ -100,11 +102,303 @@
                     </div>
                 </section>
             </div>
-            <div class="cinta">
-                <div><strong>Envío gratis</strong> desde $900 MXN</div>
-                <div><strong>Devoluciones</strong> en 15 días</div>
+
+            <div class="NuevoLanzamiento">
+                <div class="lanzamiento-info">
+                    <div class="texto-principal">
+                        <h1>Nuevo Lanzamiento</h1>
+                        <p><strong>Set de libros de bolsillo <i>El punto de vista del lector omnisciente</i></strong></p>
+                    </div>
+
+                    <div class="informacion">
+                        <p>Un artículo de colección ideal para los fans de la popular novela web y webtoon, este set es perfecto para leer, coleccionar o exhibir.</p>
+                        <ul>
+                            <li>Incluye la serie en formato de libro de bolsillo.</li>
+                            <li>Perfecto para leer y ampliar tu colección personal.</li>
+                            <li>Ideal para coleccionistas de novelas web, webtoons y manhwa.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="slider-container">
+                    <div class="slider">
+                        <div><img src="img/orvSet1.png" alt="Nuevos lanzamientos"></div>
+                        <div><img src="img/orvSet2.png" alt="Nuevos lanzamientos"></div>
+                        <div><img src="img/orvSet3.png" alt="Nuevos lanzamientos"></div>
+                        <div><img src="img/orvSet4.png" alt="Nuevos lanzamientos"></div>
+                        <div><img src="img/orvSet5.png" alt="Nuevos lanzamientos"></div>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <section id="catalogo">
+            <h2>Catálogo</h2>
+            <div class="filtros">
+                <input type="search" id="buscador" placeholder="Buscar artículo">
+            </div>
+            <p id="sin-resultados" class="aviso" hidden>No hay productos con esa búsqueda</p>
+            <div id="rejilla-libros" class="rejilla"></div>
+            <div class="carrusel-wrapper">
+                <button class="btn-carrusel prev"><span class="material-symbols-outlined">arrow_back_ios</span></button>
+                <div class="carrusel">
+                    <div class="catalogo-container">
+                        <div class="producto-card">
+                            <img src="img/bts.png" alt="bts">
+                            <h3>BTS - Rolling Stone Collectors Edition Set</h3>
+                            <p>Edición de colección de Rolling Stone</p>
+                            <h4>$3451</h4>
+                            <div class="contador">
+                                <button class="btn-menos">-</button>
+                                <span class="cantidad">1</span>
+                                <button class="btn-mas">+</button>
+                            </div>
+                            <!--data-id para que sepa el JavaScript que producto estoy haciendo click-->
+                            <p><button class="btn-ordenar" data-id="prod-1">Ordenar</button></p>
+                        </div>
+                        <div class="producto-card">
+                            <img src="img/nct.png" alt="nct">
+                            <h3>NCT127: BLINGY</h3>
+                            <p>Camisa de algodón</p>
+                            <h4>$377</h4>
+                            <div class="contador">
+                                <button class="btn-menos">-</button>
+                                <span class="cantidad">1</span>
+                                <button class="btn-mas">+</button>
+                            </div>
+                            <p><button class="btn-ordenar" data-id="prod-2">Ordenar</button></p>
+                        </div>
+                        <div class="producto-card">
+                            <img src="img/llavero.png" alt="llavero">
+                            <h3>One-Room TA</h3>
+                            <p>Llavero de teclas</p>
+                            <h4>$287</h4>
+                            <div class="contador">
+                                <button class="btn-menos">-</button>
+                                <span class="cantidad">1</span>
+                                <button class="btn-mas">+</button>
+                            </div>
+                            <p><button class="btn-ordenar" data-id="prod-3">Ordenar</button></p>
+                        </div>
+                        <div class="producto-card">
+                            <img src="img/alien.png" alt="alien">
+                            <h3>Alien Stage</h3>
+                            <p>Póster de colección de Anakt Garden</p>
+                            <h4>$161</h4>
+                            <div class="contador">
+                                <button class="btn-menos">-</button>
+                                <span class="cantidad">1</span>
+                                <button class="btn-mas">+</button>
+                            </div>
+                            <p><button class="btn-ordenar" data-id="prod-4">Ordenar</button></p>
+                        </div>
+
+                        <div class="producto-card">
+                            <img src="img/debut.png" alt="debut">
+                            <h3>Debut or Die</h3>
+                            <p>Parte 4 Set (Pasta dura + Cubierta de libro + Mini Póster)</p>
+                            <h4>$1959</h4>
+                            <div class="contador">
+                                <button class="btn-menos">-</button>
+                                <span class="cantidad">1</span>
+                                <button class="btn-mas">+</button>
+                            </div>
+                            <p><button class="btn-ordenar" data-id="prod-5">Ordenar</button></p>
+                        </div>
+
+                        <div class="producto-card">
+                            <img src="img/mom.png" alt="mom">
+                            <h3>On the Way to Meet Mom</h3>
+                            <p>Versión especial Vol. 3 y 4</p>
+                            <h4>$898</h4>
+                            <div class="contador">
+                                <button class="btn-menos">-</button>
+                                <span class="cantidad">1</span>
+                                <button class="btn-mas">+</button>
+                            </div>
+                            <p><button class="btn-ordenar" data-id="prod-6">Ordenar</button></p>
+                        </div>
+                        <div class="producto-card">
+                            <img src="img/apricot.png" alt="apricot">
+                            <h3>SKINFOOD Mascarilla Facial</h3>
+                            <p>Mascarilla facial de albaricoque</p>
+                            <h4>$215</h4>
+                            <div class="contador">
+                                <button class="btn-menos">-</button>
+                                <span class="cantidad">1</span>
+                                <button class="btn-mas">+</button>
+                            </div>
+                            <p><button class="btn-ordenar" data-id="prod-7">Ordenar</button></p>
+                        </div>
+                        <div class="producto-card">
+                            <img src="img/toner.png" alt="toner">
+                            <h3>SKINFOOD Tónico</h3>
+                            <p>Rico en aguacate</p>
+                            <h4>$269</h4>
+                            <div class="contador">
+                                <button class="btn-menos">-</button>
+                                <span class="cantidad">1</span>
+                                <button class="btn-mas">+</button>
+                            </div>
+                            <p><button class="btn-ordenar" data-id="prod-8">Ordenar</button></p>
+                        </div>
+                        <div class="producto-card">
+                            <img src="img/cuchillo.png" alt="cuchillo">
+                            <h3>Neoflam</h3>
+                            <p>Juego de 4 cuchillos con revestimiento de titanio</p>
+                            <h4>$400</h4>
+                            <div class="contador">
+                                <button class="btn-menos">-</button>
+                                <span class="cantidad">1</span>
+                                <button class="btn-mas">+</button>
+                            </div>
+                            <p><button class="btn-ordenar" data-id="prod-9">Ordenar</button></p>
+                        </div>
+                        <div class="producto-card">
+                            <img src="img/cacerola.png" alt="cacerola">
+                            <h3>Neoflam x Miffy</h3>
+                            <p>Cacerola de leche de 16 cm</p>
+                            <h4>$2150</h4>
+                            <div class="contador">
+                                <button class="btn-menos">-</button>
+                                <span class="cantidad">1</span>
+                                <button class="btn-mas">+</button>
+                            </div>
+                            <p><button class="btn-ordenar" data-id="prod-10">Ordenar</button></p>
+                        </div>
+                    </div>
+                    <button class="btn-carrusel next"><span
+                            class="material-symbols-outlined">arrow_forward_ios</span></button>
+                </div>
+        </section>
+
+        <section id="carrito">
+            <h2>Tu carrito</h2>
+            <p id="carrito-vacio" class="aviso">Tu carrito está vacío. Agrega productos desde el catálogo.</p>
+            <div id="carrito-contenido" hidden>
+                <ul id="lista-carrito" class="lista-carrito"></ul>
+                <div class="resumen">
+                    <label for="moneda">Ver total en
+                        <select id="moneda">
+                            <option value="MXN">Pesos (MXN)</option>
+                            <option value="USD">Dólares (USD)</option>
+                            <option value="EUR">Euros (EUR)</option>
+                        </select>
+                    </label>
+                    <p>Subtotal: <strong id="subtotal">$0.00</strong></p>
+                    <p>Envío: <strong id="envio">$0.00</strong></p>
+                    <p class="total">Total: <strong id="total">$0.00</strong></p>
+                    <button id="btn-comprar" class="boton">Finalizar compra</button>
+                    <button id="btn-vaciar" class="boton secundario">Vaciar carrito</button>
+                </div>
+            </div>
+            <p id="mensaje-compra" class="exito" hidden></p>
+        </section>
+
+        <section id="nosotros" class="pagina">
+            <h2>Acerca de nosotros</h2>
+            <div class="dos-columnas">
+                <div>
+                    <p>TONNIE nace de mi amor hacia los webtoons. Pero al mismo tiempo es muy difícil conseguir
+                        productos a un precio justo.</p> <br>
+                    <p>Esta tienda está hecha de una fan para otro fan. Cualquier duda o cotización puedes contactarme
+                        por nuestra página de <a href="contacto.html"
+                            style="color: #992447; font-weight: bold;">contacto</a></p>
+                </div>
+                <div class="acordeon">
+                    <h3 class="acordeon-titulo">¿Cómo envían los pedidos?</h3>
+                    <div class="acordeon-cuerpo">
+                        <p>Ofrecemos varias opciones de paquetería que se adaptan a tu presupuesto.</p>
+                    </div>
+                    <h3 class="acordeon-titulo">¿Puedo devolver un producto?</h3>
+                    <div class="acordeon-cuerpo">
+                        <p>Sí, dentro de 15 días si está en perfecto estado.</p>
+                    </div>
+                    <h3 class="acordeon-titulo">¿Qué formas de pago aceptan?</h3>
+                    <div class="acordeon-cuerpo">
+                        <p>Tarjeta, transferencia y pago en tienda.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="reloj-caja">Hora de la tienda: <strong id="reloj">--:--:--</strong> <span
+                    id="estado-tienda"></span></div>
+        </section>
+
+        <section class="contacto-container">
+            <section class="contacto-form-section" id="contacto">
+                <h2 class="contacto-h2">¿Tiene alguna duda?</h2>
+                <p class="contacto-intro">¿Tiene alguna duda sobre el estado de tu producto o quieres cotizar uno?
+                    Mándame un mensaje aquí, y me pondré en contacto.</p>
+
+                <div class="contacto-info">
+                    <p>
+                        <!--SVG de correo-->
+                        <svg class="contacto-icon" viewBox="0 0 24 24">
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                        <strong>Email: ixchel_torres@anahuac.mx</strong>
+                    </p>
+                    <p>
+                        <!--SVG de reloj -->
+                        <svg class="contacto-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <strong>Hours: Lun-Sa · 11:00–20:00 </strong>
+                    </p>
+                </div>
+
+                <form class="form" id="form-validacion" novalidate>
+                    <div class="input-group">
+                        <label for="nombre" class="detalles">SU NOMBRE</label>
+                        <input type="text" id="nombre" required>
+                        <small>Por favor ingrese su nombre, no se aceptan números ni símbolos</small>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email" class="detalles">EMAIL</label>
+                        <input type="email" id="email" required>
+                        <small>Por favor ingrese su email</small>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="tel" class="detalles">TELÉFONO</label>
+                        <input type="tel" id="telefono" required>
+                        <small>Por favor ingrese su número de teléfono</small>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="subject" class="detalles">ASUNTO</label>
+                        <input type="text" id="asunto" required>
+                        <small>Por favor ingrese un asunto</small>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="message" class="detalles">MENSAJE</label><br>
+                        <textarea id="message" rows="1" required></textarea>
+                        <small>Por favor ingrese sus dudas o requisición</small>
+                    </div>
+
+                    <button type="submit" class="btn-submit" value="Send Message">ENVIAR</button>
+                </form>
+            </section>
+
+            <section class="ubicacion">
+                <h2>Nuestra ubicación</h2>
+                <p class="contacto-intro">¡Visita nuestra tienda física!</p>
+                <!-- Mapa de Google Maps -->
+                <iframe class="mapa"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.635206617149!2d-100.3466174!3d20.643720899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d35b7ed3663e63%3A0xe0c718899c86897b!2sResidencial%20El%20Refugio!5e0!3m2!1ses!2smx!4v1790562844019!5m2!1ses!2smx"
+                    height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </section>
+        </section>
+
+        <div class="cinta">
+            <div><strong>Envío gratis</strong> desde $900 MXN</div>
+            <div><strong>Devoluciones</strong> en 15 días</div>
+        </div>
 
     </main>
 
@@ -120,6 +414,8 @@
     <script src="scripts/script.js"></script>
     <!--Archivo de uso de jQuery-->
     <script src="scripts/jQueryScript.js"></script>
+    <!--bxSlider-->
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
 </body>
 
 </html>
